@@ -1,1 +1,2 @@
-cmd /k lua run.lua
+lua run.lua
+pause

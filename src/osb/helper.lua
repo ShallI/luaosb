@@ -1,4 +1,3 @@
-print("helper.lua")
 ori_print = print
 print = function(...) 
 	if type(...) == "table" then
