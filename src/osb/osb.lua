@@ -5,3 +5,5 @@ function GenOsb(osb)
 	
 	fileOut:close()
 end
+
+clsOsb = object:new("clsOsb")
