@@ -23,12 +23,14 @@ end
 object = {}
 classtable = {}
 classcount = 0
-object.new = function(self,classname)
+object.new = function(self,classname) --with classname regard as inherting
 	local obj = {}
 	self.__index = self
 	self.__class = self
-	classcount = classcount + 1
-	classtable[self] = classname or ("class"..classcount)
+	if classname then
+		classcount = classcount + 1
+		classtable[self] = classname or ("cls_"..classcount)
+	end
 	setmetatable(obj,self)
 	return obj
 end
